@@ -1,0 +1,154 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-pink: hsl(275, 100%, 93%);
+  --Grayish-purple: hsl(292, 16%, 49%);
+  --Dark-purple: hsl(292, 42%, 14%);
+
+  --font: "Work Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+}
+
+/* .container {
+} */
+
+.divSuperior {
+  width: 100%;
+  height: 250px;
+  background-color: var(--Dark-purple);
+  background-image: url(/assets/images/background-pattern-mobile.svg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.divInferior {
+  width: 100%;
+  height: 800px;
+  background-color: var(--Light-pink);
+}
+
+.faqs {
+  height: max-content;
+  width: 80%;
+  max-width: 500px;
+  background-color: var(--White);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 10px;
+  background-color: var(--White);
+}
+
+.faqs-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.faqs-figure {
+  width: 20px;
+  height: 20px;
+}
+
+.faqs-img {
+  width: 20px;
+}
+
+.faqs-title {
+  color: var(--Dark-purple);
+}
+
+.faqs-questions {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--Dark-purple);
+}
+
+.questions-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+
+.questions-container:hover {
+  color: var(--Grayish-purple);
+}
+
+.question {
+  width: 80%;
+}
+
+.img-plus,
+.img-minus {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.questions.close .img-minus {
+  display: none;
+}
+
+.questions .img-minus {
+  display: none;
+}
+
+.questions.open .img-minus {
+  display: block;
+}
+
+.questions.open .img-plus {
+  display: none;
+}
+
+.questions-response {
+  color: hsl(275, 100%, 85%);
+  font-weight: 600;
+  font-size: 0.9em;
+  line-height: 1.3;
+  margin-top: 1.2rem;
+  height: 0;
+  overflow: hidden;
+  transition: 0.8 all ease;
+}
+
+.questions.open .questions-response {
+  margin-bottom: 2rem;
+  height: fit-content;
+  width: 85%;
+  transition: 0.7s all ease;
+}
+
+@media screen and (min-width: 425px) {
+  .faqs-title {
+    font-size: 2.5rem;
+  }
+
+  .questions.open .questions-response {
+    width: 90%;
+  }
+}
